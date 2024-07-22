@@ -1,5 +1,7 @@
 #Especificamos la imagen base que se va a usar 
 FROM debian:bullseye
+#especificamos la ruta del directorio de trabajo
+WORKDIR /mariadb
 #Lo siguiente que debemos hacer es actualizar dependencias dentro
 #la imagen
 
@@ -11,10 +13,10 @@ RUN apt-get update && apt-get upgrade -y
 #install mariadb en el contenedor 
 RUN apt-get install -y mariadb-server
 
-COPY ./mdb-conf.sh /mdb-conf.sh
+COPY . .
 
 EXPOSE 3306
 
-RUN chmod +x /mdb-conf.sh
+RUN chmod +x mdb-conf.sh
 #El comando default va a ser el punto sh
-ENTRYPOINT [ "./mdb_conf.sh" ]
+CMD bash mdb-conf.sh
