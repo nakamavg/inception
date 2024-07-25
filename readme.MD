@@ -7,6 +7,6 @@ Docker es una plataforma de código abierto que permite la creación, distribuci
 ### Estructura de docker compose
 ##### docker-compose.yml
 La hoja de configuracion de nuestras imagenes docker ahora entraremos mas en detalle.
-#### [Services](services.md)
+#### [Services](services.MD)
 #### Cada servicio tiene su dockerfile
-#### [Dockerfile](_dockerfile.md)
+#### [Dockerfile](_dockerfile.MD)
