@@ -3,6 +3,7 @@
 # pull the base image
 FROM debian:bullseye
 
+WORKDIR /nginx
 # update and upgrade the system
 RUN apt-get update && apt-get upgrade -y
 
@@ -11,6 +12,7 @@ RUN apt-get install -y nginx openssl
 
 # create the ssl directory
 RUN mkdir -p /etc/nginx/ssl
+
 
 # generate the ssl certificate
 RUN openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout \

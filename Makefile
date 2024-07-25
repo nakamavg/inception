@@ -1,4 +1,4 @@
-WP_DATA = home/data/wordpress #define the path to the wordpress data
+WP_DATA = /users/$(USER)/data/wordpress #define the path to the wordpress data
 DB_DATA = /users/$(USER)/data/mariadb #define the path to the mariadb data
 
 # default target
